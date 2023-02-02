@@ -1,0 +1,28 @@
+<!--
+  @description       : 
+  @author            : SUDEER K
+  @group             : 
+  @last modified on  : 02-02-2023
+  @last modified by  : SUDEER K
+  Modifications Log
+  Ver   Date         Author     Modification
+  1.0   02-02-2023   SUDEER K   Initial Version
+-->
+<template>
+    <lightning-card>
+        <div class="container">
+        <lightning-textarea class="large-area" lwc:ref="inputArea" placeholder="Enter your JSON here...">
+        </lightning-textarea>
+        <div class="controls">
+            <lightning-button class="controls__button" label="Format" type="submit" onclick={handleFormat}>
+            </lightning-button>
+            <lightning-button class="controls__button" label="Prettify" type="submit" onclick={handlePrettify}>
+            </lightning-button>
+            <lightning-button class="controls__button" label="Minify" type="submit" onclick={handleMinify}>
+            </lightning-button>
+        </div>
+        <lightning-textarea  class="large-area" lwc:ref="outputArea" read-only="true" 
+        placeholder="Your JSON will appear here..."></lightning-textarea>
+    </div>
+    </lightning-card>
+</template>
